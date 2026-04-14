@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(taskkill //F //PID 22340)",
+      "Bash(node server/index.js)",
+      "Bash(node -e ':*)"
+    ]
+  }
+}
