@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(scutil:*)",
+      "Bash(curl -v --connect-timeout 5 https://www.google.com)"
+    ]
+  }
+}

@@ -3,13 +3,15 @@ import { Layout, Menu } from 'antd';
 import {
   DashboardOutlined,
   CameraOutlined,
-  ClockCircleOutlined
+  ClockCircleOutlined,
+  QuestionCircleOutlined
 } from '@ant-design/icons';
 
 import Dashboard from './pages/Dashboard';
 import Snapshots from './pages/Snapshots';
 import DiffView from './pages/DiffView';
 import Timeline from './pages/Timeline';
+import Help from './pages/Help';
 
 const { Header, Content } = Layout;
 
@@ -17,6 +19,7 @@ const menuItems = [
   { key: '/', icon: <DashboardOutlined />, label: '实时监控' },
   { key: '/snapshots', icon: <CameraOutlined />, label: '快照管理' },
   { key: '/timeline', icon: <ClockCircleOutlined />, label: '历史时间线' },
+  { key: '/help', icon: <QuestionCircleOutlined />, label: '帮助' },
 ];
 
 export default function App() {
@@ -44,6 +47,7 @@ export default function App() {
           <Route path="/snapshots" element={<Snapshots />} />
           <Route path="/diff/:id1/:id2" element={<DiffView />} />
           <Route path="/timeline" element={<Timeline />} />
+          <Route path="/help" element={<Help />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Content>
